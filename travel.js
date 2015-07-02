@@ -9,4 +9,9 @@ number.sort(
 );//配列をソート
 
 console.log()
-document.write(number)
+
+
+function OnButtonClick() {
+    target = document.getElementById("output");
+    target.innerHTML = document.write(number);
+}
