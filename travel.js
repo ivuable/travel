@@ -10,8 +10,25 @@ number.sort(
 
 console.log()
 
+function aaa(index){
+  var price = number[index];
+  var div = document.createElement("div");
+  div.textContent = price + "yen";
+  div.classList.add("box" + index);
+  return div;
+}
+
 
 function OnButtonClick() {
     target = document.getElementById("output");
     target.innerHTML = document.write(number);
+
+    var i = 0;
+    var container = document.querySelector(".contents");
+    while(i < number.length){
+      var elm = aaa(0);
+      container.appendChild(elm);
+      i = i + 1;
+    }
+
 }
